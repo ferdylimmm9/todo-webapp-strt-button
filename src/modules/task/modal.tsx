@@ -23,7 +23,7 @@ export interface TaskModalRef {
 export interface TaskModalProps {}
 
 const TaskModal = React.forwardRef<TaskModalRef, TaskModalProps>(
-  (props, ref) => {
+  (_, ref) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [task, setTask] = React.useState<TaskModel | null>(null);
     const id = task?.id as number;
