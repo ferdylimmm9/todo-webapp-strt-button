@@ -10,7 +10,7 @@ export interface ProfileModalRef {
 export interface ProfileModalProps {}
 
 const ProfileModal = React.forwardRef<ProfileModalRef, ProfileModalProps>(
-  (props, ref) => {
+  (_, ref) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const onClose = () => setIsOpen(false);
     React.useImperativeHandle(ref, () => {
